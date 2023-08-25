@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor | Results summary component</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <!-- <style>
@@ -14,55 +15,51 @@
 </head>
 <body>
   <main class="main-card">
-    <div class="flex-item score-card">
+    <div class="score-card column">
       <div>
-        <h1 class="">Your Result</h1>
+        <h1 class="score-card-heading">Your Result</h1>
       </div>
-      <div class="average-score">
-        76
+      <div class="score-card-circle column">
+        <h2 class="test-score">76</h2>
+        <p class="total-score">of 100</p>
       </div>
-      <div class="">
-        of 100
-      </div>
-      <div class="remark">
-        <h2>Great</h2>
-      </div>
-      <div class="">
-        You scored higher than 65% of the people who have taken these tests.
+      <div class="test-score-remarks column">
+        <h2 class="remark">Great</h2>
+        <p class="additional-remark">You scored higher than 65% of the people who have taken these tests.</p>
       </div>
     </div>
-    <div class="flex-item summary-card">
+    <div class="summary-card column">
       <div>
-        <h1 class="heading">Summary</h1>
+        <h1 class="summary-card-heading">Summary</h1>
       </div>
-      <div class="results">
-        <div class="result-item red">
-          <div class="subject">
+      <div class="column">
+        <div class="result red">
+          <div class="subject-container">
             <img src="assets/images/icon-reaction.svg" alt="reaction icon" class="subject-icon">
-            Reaction
+            <p class="subject-name">Reaction</p>
           </div>
-          <p class=""><span class="score">80</span><span class="total"> / 100</span></p>
+          <p class="subject-score-container"><span class="subject-score">80</span><span class="subject-total"> / 100</span></p>
         </div>
-        <div class="result-item yellow">
-          <div class="subject">
+        <div class="result yellow">
+          <div class="subject-container">
             <img src="assets/images/icon-memory.svg" alt="memory icon" class="subject-icon">
-            Memory
+            <p class="subject-name">Memory</p>
           </div>
-          <p class=""><span class="score">92</span><span class="total"> / 100</span></p>
+          <p class="subject-score-container"><span class="subject-score">92</span><span class="subject-total"> / 100</span></p>
         </div>
-        <div class="result-item green">
-          <div class="subject">
+        <div class="result green">
+          <div class="subject-container">
             <img src="assets/images/icon-verbal.svg" alt="verbal icon" class="subject-icon">
-            Verbal
+            <p class="subject-name">Verbal</p>
           </div>
-          <p class=""><span class="score">61</span><span class="total"> / 100</span></p>
+          <p class="subject-score-container"><span class="subject-score">61</span><span class="subject-total"> / 100</span></p>
         </div>
-        <div class="result-item blue">
-          <div class="subject">
+        <div class="result blue">
+          <div class="subject-container">
             <img src="assets/images/icon-visual.svg" alt="visual icon" class="subject-icon">
-            Visual
+            <p class="subject-name">Visual</p>
           </div>
-          <p class=""><span class="score">72</span><span class="total"> / 100</span></p>
+          <p class="subject-score-container"><span class="subject-score">72</span><span class="subject-total"> / 100</span></p>
         </div>
       </div>
       <button class="button">Continue</button>

@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+/* Setting initial default styles */
 
+/* Resetting margins and paddings to ensure consistency accross browsers */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Defining colors variables */
 :root {
     /* Primary Colours */
     --light-red: hsl(0, 100%, 67%);
@@ -34,7 +36,14 @@
 
 }
 
+/* Setting default paragraph font-size */
+p {
+    font-size: 18px;
+}
+
+/*  */
 body {
+    font-family: 'Hanken Grotesk', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,6 +52,7 @@ body {
     background-color: var(--white);
 }
 
+/* Styling the main card component */
 .main-card {
     display: flex;
     height: 530px;
@@ -52,64 +62,103 @@ body {
     box-shadow: 10px 10px 5px var(--pale-blue);
 }
 
-.flex-item {
+/* Defining a class for styling a vertical flex container */
+.column {
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
 
+/* Styling for the test score card */
 .score-card {
-    align-items: center;
-    justify-content: space-evenly;
+    flex: 1;
     padding: 1em;
     border-radius: 1.5em;
+    align-items: center;
+    justify-content: space-around;
     background-color: var(--light-royale-blue);
 }
 
-.circle {
-    color: var(--white);
-    height: 200px;
+/* Styling for the test score card heading */
+.score-card-heading {
+    font-size: 25px;
+    color: var(--light-lavander);
+}
+
+/* Styling the test-score-card's circle */
+.score-card-circle {
     width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     background: var(--violet-blue);
+    /* background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue)); */
 }
 
+/* Styling the test score */
+.test-score {
+    font-size: 75px;
+    color: var(--white);
+}
+
+/* Styling the total possible test score */
+.total-score {
+    color: var(--light-lavander);
+}
+
+/* Styling the test-score remarks section */
+.test-score-remarks {
+    align-items: center;
+}
+
+/* Styling the main test-score remark */
 .remark {
-    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    color: var(--white);
 }
 
+/* Styling the additional test-score remarks */
+.additional-remark {
+    padding: 1.5em;
+    text-align: center;
+    color: var(--light-lavander);
+}
+
+/* Styling the test result summary card */
 .summary-card {
-    justify-content: space-around;
+    flex: 1;
     padding: 1em;
+    justify-content: space-around;
 }
 
-.heading {
+/* Styling the test result summary card heading */
+.summary-card-heading {
+    font-size: 25px;
     margin-left: 0.5em;
     color: var(--dark-gray-blue);
 }
 
-.results {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.result-item {
+/* Styling each result item */
+.result {
     display: flex;
     justify-content: space-between;
-    padding: 1.3em;
+    padding: 1.2em;
     margin: 0.5em;
     border-radius: 0.8em;
 }
 
-.subject {
+/* Styling the subject-name-icon container */
+.subject-container {
     display: flex;
 }
 
+/* Styling subject icons */
 .subject-icon {
     margin-right: 0.5em;
 }
 
+/* Defining colors for each subject */
 .red {
     color: var(--light-red);
     background: var(--light-red-t);
@@ -130,24 +179,45 @@ body {
     background: var(--cobalt-blue-t);
 }
 
-.score {
+/* Styling test subjects scores */
+.subject-score {
     color: black;
     font-weight: 700;
 }
 
-.total {
+/* Styling the test subjects total posssible scores */
+.subject-total {
     color: var(--dark-gray-blue);
 }
 
+/* cta button styling */
 .button {
     border: none;
-    padding: 1.3em;
+    padding: 1.2em;
     margin: 0 0.5em;
     border-radius: 2em;
     color: var(--white);
+    font-size: 17px;
     background: var(--dark-gray-blue);
 }
 
+/* cta button styling for hover effect */
 .button:hover {
     background: var(--cobalt-blue);
 }
+
+
+/* Mobile Design for Responsiveness */
+@media screen and (max-width: 375px){
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+}   
