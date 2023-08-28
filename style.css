@@ -7,6 +7,12 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--white);
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+
 /* Defining colors variables */
 :root {
     /* Primary Colours */
@@ -34,32 +40,14 @@
     --dark-gray-blue: hsl(224, 30%, 27%);
     --dark-gray-blue-t: hsla(224, 30%, 27%, 0.526);
 
+    /* Border Radius */
+    --normal: 1.5em;
+
 }
 
 /* Setting default paragraph font-size */
 p {
     font-size: 18px;
-}
-
-/*  */
-body {
-    font-family: 'Hanken Grotesk', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    max-width: 100%;
-    background-color: var(--white);
-}
-
-/* Styling the main card component */
-.main-card {
-    display: flex;
-    height: 530px;
-    width: 720px;
-    border-radius: 1.5em;
-    overflow: hidden;
-    box-shadow: 10px 10px 5px var(--pale-blue);
 }
 
 /* Defining a class for styling a vertical flex container */
@@ -68,23 +56,42 @@ body {
     flex-direction: column;
 }
 
-/* Styling for the test score card */
+/* Creating a flex container on the browser window to wrap every other element */
+.main-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling the result-summary-card */
+.result-summary-card {
+    display: flex;
+    height: 530px;
+    width: 720px;
+    overflow: hidden;
+    border-radius: var(--normal);
+    box-shadow: 10px 10px 5px var(--pale-blue);
+}
+
+/* Styling the score card */
 .score-card {
-    flex: 1;
+    flex: 50%;
     padding: 1em;
-    border-radius: 1.5em;
     align-items: center;
     justify-content: space-around;
+    border-top-right-radius: var(--normal);
+    border-bottom-right-radius: var(--normal);
     background-color: var(--light-royale-blue);
 }
 
-/* Styling for the test score card heading */
+/* Styling the score-card's heading */
 .score-card-heading {
     font-size: 25px;
     color: var(--light-lavander);
 }
 
-/* Styling the test-score-card's circle */
+/* Styling the score-card's circle */
 .score-card-circle {
     width: 200px;
     height: 200px;
@@ -106,33 +113,34 @@ body {
     color: var(--light-lavander);
 }
 
-/* Styling the test-score remarks section */
+/* Styling the test's remarks section */
 .test-score-remarks {
     align-items: center;
 }
 
-/* Styling the main test-score remark */
+/* Styling the main remark */
 .remark {
     font-size: 30px;
     text-align: center;
     color: var(--white);
 }
 
-/* Styling the additional test-score remarks */
+/* Styling the additional remark */
 .additional-remark {
-    padding: 1.5em;
+    padding: 1em 1.8em;
     text-align: center;
     color: var(--light-lavander);
 }
 
-/* Styling the test result summary card */
+/* Styling the result summary card */
 .summary-card {
-    flex: 1;
+    flex: 50%;
     padding: 1em;
     justify-content: space-around;
+    background: var(--white);    
 }
 
-/* Styling the test result summary card heading */
+/* Styling the result summary card heading */
 .summary-card-heading {
     font-size: 25px;
     margin-left: 0.5em;
@@ -145,8 +153,10 @@ body {
     justify-content: space-between;
     padding: 1.2em;
     margin: 0.5em;
+    position: relative;
     border-radius: 0.8em;
 }
+
 
 /* Styling the subject-name-icon container */
 .subject-container {
@@ -207,17 +217,39 @@ body {
 }
 
 
-/* Mobile Design for Responsiveness */
-@media screen and (max-width: 375px){
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+/* Mobile Design styling for Responsiveness */
+@media (max-width: 376px) {
+
+    /* Changing the display of the browser container to optimize for smaller screens. */
+    .main-container {
+        display: block;
     }
 
-    body {
+    /* Restyling the result-summary-card to optimize for smaller screens. */
+    .result-summary-card {
+        width: 100%;
+        height: auto;
         display: flex;
+        border-radius: 0;
         flex-direction: column;
     }
-}   
+
+    /* Adjusting the spacing between the flex-items in the score and summary cards. */
+    .score-card,
+    .summary-card {
+        justify-content: space-between;
+    }
+    
+    /* Removing the top border-radius and including bottom border radius in the score-card to optimize for smaller screens. */
+    .score-card {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: var(--normal);
+    }
+
+    /* Restyling the margins between flex items in the summary card. */
+    .result,
+    .button,
+    .summary-card-heading {
+        margin: 0.7em;
+    }
+}
