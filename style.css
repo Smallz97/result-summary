@@ -98,8 +98,7 @@ p {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: var(--violet-blue);
-    /* background-image: linear-gradient(to bottom, var(--Violet-blue), var(--Persian-blue)); */
+    background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
 }
 
 /* Styling the test score */
@@ -218,7 +217,7 @@ p {
 
 
 /* Mobile Design styling for Responsiveness */
-@media (max-width: 376px) {
+@media screen and (max-width: 768px) {
 
     /* Changing the display of the browser container to optimize for smaller screens. */
     .main-container {
