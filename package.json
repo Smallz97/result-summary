@@ -1,6 +1,7 @@
 {
   "name": "results-summary-component",
   "version": "1.0.0",
+  "homepage": "https://github.com/Smallz97/results-summary-component/",
   "description": "a simple result summary page",
   "main": "index.html",
   "scripts": {
@@ -15,6 +16,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Smallz97/results-summary-component/issues"
-  },
-  "homepage": "https://github.com/Smallz97/results-summary-component/src/index.html"
+  }
 }
