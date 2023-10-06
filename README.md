@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [CHallenge Solution](https://www.frontendmentor.io/solutions/result-summary-component-AOM5l3pTp4)
+- Solution URL: [Challenge Solution](https://www.frontendmentor.io/solutions/result-summary-component-AOM5l3pTp4)
 - Live Site URL: [Results Summary Page](https://results-summary-page.firebase.com)
 
 ## My process
@@ -33,7 +33,6 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS3
-- Flexbox
 - Mobile-first workflow
 
 ### What I learned
