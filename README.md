@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/result-summary-component-AOM5l3pTp4)
-- Live Site URL: [Add live site URL here](https://results-summary-page.firebase.com)
+- Solution URL: [CHallenge Solution](https://www.frontendmentor.io/solutions/result-summary-component-AOM5l3pTp4)
+- Live Site URL: [Results Summary Page](https://results-summary-page.firebase.com)
 
 ## My process
 
@@ -48,11 +48,6 @@ To see how you can add code snippets, see below:
 ```css
 .proud-of-this-css {
   color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
 }
 ```
 
